@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Sentiment Analysis</title>
+</head>
+<body>
+	<center>
+		<h1>Flight Sentiment Analysis</h1>
+		<form action="{{url_for('predict')}}" method="POST">
+			<table>
+				<tr>
+					<td><center><h2>SENTENCE</h2></center></td>
+				</tr>		
+				<tr>
+					<td>
+						<input name="text" type="text" size="50"/>
+					</td>
+				</tr>
+			</table>
+			<input type="submit" value="submit" style="border: 0px; width: 90px; height: 40px; background: blue; color: white; font-size: 16px; margin-top: 30px;"/>
+		</form>
+		<br/>
+		{{prediction_text|safe}}
+	</center>
+</body>
+</html>
